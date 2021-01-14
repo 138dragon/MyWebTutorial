@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>WEB TITLE instead of file name</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin : 0;
+        }
+        h1 {
+            color :blueviolet;
+            font-size: 60px;
+            text-align: center;
+
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ol {
+            border-right: 1px solid gray;
+            width: 150px;
+            margin: 0;
+            padding: 40px;
+            padding-top: 20px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .hyper {
+            color: gray;
+            text-align: center;
+        }
+        #caniuse{
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        #maincontent{
+            padding: 10px;
+            margin: 10px;
+        }
+
+        @media(max-width:800px){
+            #grid {
+                display : block;
+            }
+            ol {
+                border-right: pink;
+            }
+        }
+
+    </style>
+</head>
+
+<!--
+    h1 {} 이런것을 선택자(selector)라고 한다.
+    {}안에 내용을 선언(Declaration)이라고 한다.
+
+    위에처럼 하는 것을 스타일 태그를 쓴다고하고
+    아래처럼 하는 것을 스타일 속성을 쓴다고 한다.
+
+    #은 아이디 선택자 (id값은 하나만 사용되는 것을 권장함! 유일무이한 값)
+    .은 클래스 선택자 (마지막에 등장하는 클래스 선택자가 우선순위가 높다.)
+
+    +) 구글에 css selector 검색후 여러가지 선택자를 확인할 수 있다.
+-->
+
+<body>
+    <h1>HTML RECOVERY</h1>
+    <h3 style="color: brown;">Welcome!</h3>
+
+    <div class="hyper"><a href="https://advancedwebranking.com/html" 
+        target="_blank" title="hypertext to advancedwebranking">html tag rankings</a>
+    </div>
+    <div id="caniuse" class="hyper"><a href="https://caniuse.com/" 
+        target="_blank" title="hypertext to can I use?">caniuse.com</a>
+    </div>
+    
+    <div id="grid">
+        <ol>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="boxmodel.html" target="_blank">Box Model - CSS</a></li>
+            <li><a href="videocommuity.html" target="_blank">Video Community</a></li>
+        </ol>
+        
+        <div id="maincontent">
+            <h2>main</h2>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <p style="margin-top:45px">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <img width="100%" src="https://www.getbidbar.com/assets/blog/programming_topics.jpg">
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>
