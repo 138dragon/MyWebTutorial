@@ -2,8 +2,9 @@
 
 <html>
 <head>
-    <title>WEB TITLE instead of file name</title>
+    <title>Ver2</title>
     <meta charset="utf-8">
+    <script src="botton.js"></script>
     <style>
         body {
             margin : 0;
@@ -74,64 +75,32 @@
     </style>
 </head>
 
-<!--
-    h1 {} 이런것을 선택자(selector)라고 한다.
-    {}안에 내용을 선언(Declaration)이라고 한다.
-
-    위에처럼 하는 것을 스타일 태그를 쓴다고하고
-    아래처럼 하는 것을 스타일 속성을 쓴다고 한다.
-
-    #은 아이디 선택자 (id값은 하나만 사용되는 것을 권장함! 유일무이한 값)
-    .은 클래스 선택자 (마지막에 등장하는 클래스 선택자가 우선순위가 높다.)
-
-    +) 구글에 css selector 검색후 여러가지 선택자를 확인할 수 있다.
--->
-
 <body>
     <div class="head">
         <h1>HTML RECOVERY</h1>
-        <a style="color:red; font-size: 30px;" href="index2.html">go to ver.2</a>
     </div>
 
     <h3 style="color: brown;">Welcome!</h3>
+
     <div class='buttons'>
         <input type="button" value="day" 
-        onclick="document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';"
+        onclick="
+            Body.setColor('black');
+            Body.setBackgroundColor('white');
+            Links.setColor('blue');
+        "
         >
         <input type="button" value="night"
-        onclick="document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';"
+        onclick="
+            Body.setColor('white');
+            Body.setBackgroundColor('black');
+            Links.setColor('powderblue');
+        "
         >
         <br><br>
-        <input id="nightday" type="button" value="night?" onclick="
-        var target = document.querySelector('body');
-        if(document.querySelector('#nightday').value === 'night?'){
-            target.style.backgroundColor='black';
-            target.style.color='white';
-            document.querySelector('#nightday').value='day?';
 
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                alist[i].style.color = 'powderblue';
-                i = i + 1;
-            }
-        }
-        else {
-            target.style.backgroundColor='white';
-            target.style.color='black';
-            this.value='night?';
-            document.querySelector('a').color='blue';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                alist[i].style.color = 'blue';
-                i = i + 1;
-            }
-        }
-    ">
+        <input id="nightday" type="button" value="night?" 
+        onclick="nightDayHandler(this)">
     </div>
 
 
