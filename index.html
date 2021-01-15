@@ -31,7 +31,7 @@
         }
 
         a {
-            color: black;
+            color: blue;
             text-decoration: none;
         }
 
@@ -64,6 +64,10 @@
             }
         }
 
+        .buttons {
+            text-align: center;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -83,6 +87,46 @@
 <body>
     <h1>HTML RECOVERY</h1>
     <h3 style="color: brown;">Welcome!</h3>
+    <div class='buttons'>
+        <input type="button" value="day" 
+        onclick="document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';"
+        >
+        <input type="button" value="night"
+        onclick="document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';"
+        >
+        <br><br>
+        <input id="nightday" type="button" value="night?" onclick="
+        var target = document.querySelector('body');
+        if(document.querySelector('#nightday').value === 'night?'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            document.querySelector('#nightday').value='day?';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i + 1;
+            }
+        }
+        else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value='night?';
+            document.querySelector('a').color='blue';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+        }
+    ">
+    </div>
+
 
     <div class="hyper"><a href="https://advancedwebranking.com/html" 
         target="_blank" title="hypertext to advancedwebranking">html tag rankings</a>
